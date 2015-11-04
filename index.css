@@ -1,15 +1,16 @@
-@import "http://webfonts.ru/import/americantext.css";
+@import "http://webfonts.ru/import/anahit.css";
 @import "http://webfonts.ru/import/america.css";
-@import "http://webfonts.ru/import/amerpro.css";
-@import "http://webfonts.ru/import/arnamuserif.css";
-@import "http://webfonts.ru/import/barkentina.css";
 @import "http://webfonts.ru/import/bloccus.css";
 @import "http://webfonts.ru/import/constantine.css";
 @import "http://webfonts.ru/import/corki.css";
-@import "http://webfonts.ru/import/fog6.css";
+@import "http://webfonts.ru/import/certege.css";
+@import "http://webfonts.ru/import/angleciadisplay.css";
+
 body
 {
-    background: url(http://s5.hostingkartinok.com/uploads/images/2014/01/2fe2a312882b1ce43c64170001d9a336.jpg);
+    background: url(http://bgfons.com/upload/paper_texture327.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main
@@ -29,10 +30,16 @@ main
 }
 h1
 {
+    margin: 0;
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     font-family: 'Amerika Pro', 'Garamond', serif;
     letter-spacing: 10px;
+}
+
+header
+{
+    text-align: center;
 }
 
 h2
@@ -48,31 +55,81 @@ img
     width: 85%;
     padding: 0 7.5%;
 }
+
+.header
+{
+    width: 50%;
+}
+
 p
 {
     padding: 0 20px;
     text-indent: 35px;
+    font-family: 'Anglecia Pro Dsp', 'Garamond', serif;
 }
 
-p:not(:first-child)::first-letter
+nav
+{
+    display:inline;
+}
+
+input[value="night"]:checked ~ main
+{
+    background: url(night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+input[value="night"]:checked ~ main p::first-letter
+{
+    color: red;
+}
+
+input[value="less"]:checked ~ main p
+{
+    font-size: 0.7em;
+}
+
+input[value="more"]:checked ~ main p
+{
+    font-size: 1.3em;
+}
+
+input[value="middle"]:checked ~ main p
+{
+    font-size: 1em;
+}
+
+input[value="serif"]:checked ~ main p
+{
+    font-family: 'Anglecia Pro Dsp', 'Garamond', serif;
+}
+
+input[value="sans-serif"]:checked ~ main p
+{
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+p::first-letter
 {
     font-size: 2em;
     font-weight: bold;
     font-family: 'American TextC', 'Garamond', serif;
 }
 
-p:first-child
-{
-    -webkit-column-span:2;
-    column-span:2;
-    -moz-column-span:2;
-    margin: 0;
-}
 h3
 {
     font-family: 'America XIX', 'Garamond', serif;
     padding: 0 20px;
     padding-top: 15%;
+    text-transform: uppercase;
+}
+
+.time
+{
+    font-size: 2em;
     text-transform: uppercase;
 }
 
@@ -103,7 +160,40 @@ footer
 {
     padding: 40px 0;
 }
+
 q
 {
+    font-weight: bolder;
+}
+
+.author
+{
+    font-family: 'Garamond', serif;
+}
+
+.description
+{
+    font-family: 'Certege', 'Garamond', serif;
+    color: gray;
+}
+
+blockquote::after
+{
+    content: url(close.png);
+}
+
+blockquote::before
+{
+    content: url(open.png);
+}
+
+blockquote
+{
+    letter-spacing: -2px;
     font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 5%;
+    font-family: 'AMG Anahit', 'Garamond', serif;
+    /*font-weight: bold;*/
 }
