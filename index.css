@@ -91,11 +91,24 @@ input[value="less"]:checked ~ main p
     font-size: 0.7em;
 }
 
+input[value="less"]:checked ~ main
+{
+    column-rule: 1px solid #000;
+    -webkit-column-rule: 1px solid #000;
+    -moz-column-rule: 1px solid #000;
+}
+
 input[value="more"]:checked ~ main p
 {
     font-size: 1.3em;
 }
 
+input[value="more"]:checked ~ main
+{
+    column-rule: 1px solid #000;
+    -webkit-column-rule: 1px solid #000;
+    -moz-column-rule: 1px solid #000;
+}
 input[value="middle"]:checked ~ main p
 {
     font-size: 1em;
