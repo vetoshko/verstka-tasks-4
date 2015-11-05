@@ -111,6 +111,16 @@ input[value="sans-serif"]:checked ~ main p
     font-family: 'Helvetica', sans-serif;
 }
 
+input
+{
+    text-align: left;
+}
+
+.tools
+{
+    text-align: left;
+    width: auto;
+}
 
 p::first-letter
 {
